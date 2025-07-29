@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook Login Clone</title>
+    <link rel="stylesheet" href="Login.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-box">
+            <div><img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="" height="100px"
+                    class="first-img">
+                <img src="https://z-m-static.xx.fbcdn.net/rsrc.php/v4/yD/r/5D8s-GsHJlJ.png" alt="" class="second-img">
+            </div>
+
+            <p class="tagline">Facebook helps you connect and share with the people in your life.</p>
+        </div>
+        <div class="right-box">
+            <form action="" class="login-box">
+                <input type="email" placeholder="Email address or phone number" required id="login-email" />
+                <input type="password" placeholder="Password" required id="login-password"/>
+                <button class="login-btn" type="submit" onclick="loginUser(event)">Log in</button>
+                <a href="#" class="forgot-link">Forgotten password?</a>
+                <hr />
+                <button class="create-btn" type="button" onclick=" window.location.assign('./register.html')">Create new account</button>
+            </form>
+            <p class="create-page"><strong>Create a Page</strong> for a celebrity, brand or business.</p>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+
+</html>
