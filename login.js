@@ -50,7 +50,7 @@ function resgisterUser(event) {
             confirmButtonColor: "#007bff"
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.assign("./Login.html")
+                window.location.assign("./index.html")
             }
         });
     }
