@@ -146,7 +146,6 @@ header .search-bar {
 .left {
     grid-area: left;
     /* background-color: blue; */
-    height: ;
     /* border: 3px solid black; */
     background-color: #F2F4F7;
     overflow-y: scroll;
@@ -242,9 +241,163 @@ main {
     grid-area: main;
     background-color: #F2F4F7;
     height: 100vh;
-    border: 2px solid black;
+    /* border: 2px solid black; */
+    padding-top: 20px;
 
 }
+
+.post-box {
+    background-color: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.top-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.post-input {
+    flex: 1;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: #f0f2f5;
+    font-size: 16px;
+}
+
+.post-input:focus {
+    outline: none;
+}
+
+.bottom-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    color: #555;
+    font-size: 14px;
+}
+
+.action .icon {
+    width: 20px;
+    height: 20px;
+}
+
+span {
+    font-weight: 600;
+}
+
+
+.stories-container {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.story-card {
+    width: 130px;
+    height: 230px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.story-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.my-image{
+    width: 100%;
+    height: 75%;
+    background-image: url('pro-img.jpg');
+    background-size: cover;
+}
+.story-avatar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 36px;
+    height: 36px;
+    border: 3px solid #1877f2;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.story-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.story-name {
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.create-story {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    font-weight: bold;
+    gap: 10px;
+}
+
+.create-story img {
+    height: 150px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.plus-icon {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1877f2;
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .right {
     grid-area: right;
