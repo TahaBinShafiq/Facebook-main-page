@@ -22,14 +22,17 @@ function checkUserLogin() {
             title: "Please Login",
             icon: "warning",
             confirmButtonText: "Login Now",
-            showConfirmButton: false,
-            timer: 1000,
-            timerProgressBar: true
-        }).then(() => {
-            window.location.assign("../index.html")
+            showConfirmButton: true,
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.assign("../index.html")
+            }
         })
     }
 }
+window.addEventListener("DOMContentLoaded", checkUserLogin);
 
-console.log("hellow")
-checkUserLogin();
+function logoutUser() {
+    localStorage.removeItem("loginUser");
+    window.location.assign("../index.html");
+}
