@@ -13,6 +13,13 @@ window.addEventListener("click", function (e) {
     }
 });
 
+function addUserName(){
+    let loggedInUser = JSON.parse(localStorage.getItem("loginUser"));
+    let userName = document.getElementById("userName")
+    userName.innerHTML = loggedInUser.fullName
+}
+
+addUserName()
 
 
 function checkUserLogin() {
@@ -23,6 +30,9 @@ function checkUserLogin() {
             icon: "warning",
             confirmButtonText: "Login Now",
             showConfirmButton: true,
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            allowEnterKey: false
         }).then((result) => {
             if (result.isConfirmed) {
                 window.location.assign("../index.html")

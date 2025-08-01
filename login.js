@@ -2,10 +2,13 @@ class Person {
     fullName
     email
     password
-    constructor(fullName, email, password) {
+    id
+    id
+    constructor(fullName, email, password , id) {
         this.fullName = fullName,
             this.email = email,
             this.password = password
+            this.id = id
     }
 }
 
@@ -34,7 +37,8 @@ function resgisterUser(event) {
         email.value = "";
         password.value = "";
     } else {
-        let newUser = new Person(fullName.value, email.value, password.value);
+        let newId = usersFormStorage.length + 1;
+        let newUser = new Person(fullName.value, email.value, password.value , newId);
         usersFormStorage.push(newUser);
         console.log(usersFormStorage);
         localStorage.setItem("users", JSON.stringify(usersFormStorage))
