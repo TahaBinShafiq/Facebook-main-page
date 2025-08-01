@@ -5,6 +5,14 @@ body {
 
 }
 
+.media-header {
+    display: none;
+}
+
+.media-icons {
+    display: none;
+}
+
 .container {
     display: grid;
     grid-template-areas: "header header header"
@@ -12,7 +20,7 @@ body {
     grid-template-columns: 23% auto 23%;
     position: relative;
     margin: 0px auto;
-    max-width: 1265px;
+    width: 1263px;
     overflow: visible;
 }
 
@@ -695,6 +703,48 @@ span {
     } */
 
 
+    .media-header {
+        display: flex !important;
+        width: 100%;
+        height: 50px;
+        background-color: white;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .media-serch {
+        height: 40px;
+        width: 40px;
+        background-color: #eaeaeb;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+    .media-icons {
+        display: flex;
+        background-color: white;
+        height: 50px;
+        width: 100%;
+        justify-content: start;
+        gap: 0px;
+        align-items: center;
+        border-bottom: 2px solid rgb(201, 201, 201);
+    }
+
+    .media-icons > div{
+        width: 63px;
+        height: 50px;
+        border: 0.1px solid rgb(244, 243, 243);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
     header {
         display: none !important;
     }
@@ -707,13 +757,107 @@ span {
     .container {
         grid-template-areas:
             "main";
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%;
+        width: 100%;
+        padding: 0px;
     }
 
     main {
         grid-area: main;
-        width: 100%;
-        padding: 5px;
+        width: 100% !important;
+        padding: 0px;
     }
 
+    .stories-container {
+        width: 98.5% !important;
+        justify-content: start;
+        padding-left: 5px;
+        margin-top: 0px;
+        background-color: white;
+        padding-top: 5px;
+
+    }
+
+    .story-card {
+        height: 183px;
+        width: 103px;
+    }
+
+    .story-card-2 {
+        width: 103px;
+        height: 183px;
+    }
+
+    .story-name {
+        font-size: small;
+
+    }
+
+    .story-name-2 {
+        font-size: small;
+        text-align: left;
+        bottom: 0px;
+        padding: 7px;
+    }
+
+    .post-box {
+        margin: 0px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .bottom-section {
+        padding: 0px;
+    }
+
+    .action-1,
+    .action-2 {
+        display: none;
+    }
+
+    .account-2 {
+        height: 100%;
+        width: 40px;
+        display: flex !important;
+        margin-bottom: 10px !important;
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+
+    .icon-2 {
+        height: 30px !important;
+        width: 30px !important;
+    }
+
+
+    .media-span-2 {
+        display: none;
+    }
+
+    .media-span {
+        font-weight: 500;
+        display: block;
+        position: absolute !important;
+        bottom: 10px !important;
+        right: 13px;
+    }
+
+    .post-box-1 {
+        margin: 0px;
+        width: 95.5% !important;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding: 8px;
+        border-radius: 0px;
+        border-bottom: 2px solid gainsboro;
+    }
+
+    .line-1 {
+        display: none;
+    }
+
+    .post-input {
+        width: 220px;
+    }
 }
