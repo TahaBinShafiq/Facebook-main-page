@@ -26,7 +26,7 @@ function checkUserLogin() {
             timer: 1000,
             timerProgressBar: true
         }).then(() => {
-            window.location.assign("../login.html")
+            window.location.assign("../index.html")
         })
     }
 }
