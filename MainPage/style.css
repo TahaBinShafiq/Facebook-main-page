@@ -129,7 +129,9 @@ header .search-bar {
 .profile-div {
     background-image: url('pro-img.jpg');
     background-size: cover;
-    width: 17px;
+    width: 20px;
+    height: 20px;
+    position: relative;
 }
 
 .pro-svg {
@@ -150,11 +152,11 @@ header .search-bar {
     top: 60px;
     align-self: start;
     height: calc(100vh - 60px);
-    
+
 }
 
-.left:hover{
-    overflow-y: auto; 
+.left:hover {
+    overflow-y: auto;
     overflow-x: hidden;
 }
 
@@ -372,6 +374,7 @@ span {
     height: 100%;
     width: 100%;
 }
+
 .img-3:hover {
     transform: scale(1.1);
     /* 10% zoom on hover */
@@ -424,7 +427,7 @@ span {
     object-fit: cover;
 }
 
-.my-image:hover  {
+.my-image:hover {
     transform: scale(1.1);
     /* 10% zoom on hover */
     transition: transform 0.2s ease-in-out;
@@ -494,84 +497,146 @@ span {
 
 }
 
-.right:hover{
+.right:hover {
     overflow-x: hidden;
     overflow-y: auto;
 }
 
 
 .post-box {
-  width: 535px;
-  max-width: 600px;
-  margin: 10px auto;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  font-family: 'Segoe UI', sans-serif;
-  overflow: hidden;
+    width: 535px;
+    max-width: 600px;
+    margin: 10px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
 }
 
 .post-header {
-  display: flex;
-  align-items: center;
-  padding: 15px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
 }
 
 .avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
-.user-info{
+.user-info {
     margin-left: 5px;
 }
 
 .user-info h4 {
-  margin: 0;
-  font-size: 16px;
+    margin: 0;
+    font-size: 16px;
 }
 
 .user-info span {
-  font-size: 12px;
-  color: gray;
+    font-size: 12px;
+    color: gray;
 }
 
 .post-content {
-  padding: 0 15px 15px 15px;
+    padding: 0 15px 15px 15px;
 }
 
 .post-content p {
-  margin: 0 0 10px 0;
+    margin: 0 0 10px 0;
 }
 
 .post-content img {
-  width: 100%;
-  border-radius: 8px;
+    width: 100%;
+    border-radius: 8px;
 }
 
 .post-actions {
-  display: flex;
-  justify-content: space-around;
-  border-top: 1px solid #ddd;
-  padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #ddd;
+    padding: 10px;
 }
 
 .post-actions button {
-  background: none;
-  border: none;
-  color: #555;
-  font-size: 16px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  padding: 5px 10px;
-  transition: background 0.2s;
+    background: none;
+    border: none;
+    color: #555;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    transition: background 0.2s;
 }
 
 .post-actions button:hover {
-  background-color: #f0f2f5;
-  border-radius: 5px;
+    background-color: #f0f2f5;
+    border-radius: 5px;
+}
+
+.profile-icon {
+    padding: 0px !important;
+}
+
+.profile-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.header-last-items  .dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background-color: #D6D9DD;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px !important;
+    flex-direction: column;
+    min-width: 180px;
+    z-index: 999;
+    padding: 20px !important;
+}
+
+.dropdown-menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    width: 100%;
+    border-radius: 10px;
+    display: show;
+    font-family: Arial,  sans-serif;
+}
+
+.dropdown-menu a:hover {
+    background-color: #a5a5a6;
+}
+
+
+
+.dropdown-menu {
+    display: none;
+}
+
+.dropdown-menu.show {
+    display: flex;
+}
+
+.dropicon{
+    position: absolute;
+    bottom: 8px;
+    right: 11px;
+    z-index: 55;
+    background-color: #dfdfe1;
+    border-radius: 50%;
+    border: 2px solid white;
+    height: 12px;
+    width: 12px;
 }

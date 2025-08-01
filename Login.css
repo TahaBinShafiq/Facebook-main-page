@@ -108,6 +108,11 @@ hr {
     text-align: center;
 }
 
+#incorrect-pass{
+    display: none;
+    margin: 0px;
+    color: red;
+}
 
 @media screen and (max-width: 600px) {
 

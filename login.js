@@ -50,7 +50,7 @@ function resgisterUser(event) {
             confirmButtonColor: "#007bff"
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.assign("./index.html")
+                window.location.assign("login.html")
             }
         });
     }
@@ -72,5 +72,13 @@ function loginUser(event) {
         password.value = ""
         localStorage.setItem("loginUser", JSON.stringify(savedUser));
         window.location.assign("MainPage/index.html")
+    } else {
+        email.value = ""
+        password.value = ""
+        let incorrectPass = document.getElementById("incorrect-pass")
+        incorrectPass.style.display = "block";
+        incorrectPass.innerHTML = "Invalid credientials"
+
     }
+
 }

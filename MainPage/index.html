@@ -154,13 +154,12 @@
                         </path>
                     </svg>
                 </div>
-                <div class="profile-div">
 
-                </div>
 
-                <div class="pro-svg">
+                <div class="profile-icon" id="profile-icon" onclick="toggleDropdown()">
+                    <div class="profile-div"></div>
                     <svg viewBox="0 0 16 16" width="12" height="12" fill="currentColor"
-                        class="xfx01vb x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq"
+                        class="xfx01vb x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq dropicon"
                         style="--color: var(--primary-icon);">
                         <g fill-rule="evenodd" transform="translate(-448 -544)">
                             <path fill-rule="nonzero"
@@ -168,8 +167,14 @@
                             </path>
                         </g>
                     </svg>
-
                 </div>
+                <div class="dropdown-menu" id="dropdown">
+                    <a href="#">View Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Help & Support</a>
+                    <a href="#">Logout</a>
+                </div>
+
 
             </div>
 
@@ -181,7 +186,7 @@
 
                 <div style="display: flex; align-items: center; gap: 10px;" class="items">
                     <div class="sec-pro-div"></div>
-                    <div><span class="pro-name">Taha Bin Shafiq</span></div>
+                    <div><span class="pro-name" id="userName">Taha Bin Shafiq</span></div>
                 </div>
                 <div style="display: flex; align-items: center; gap: 10px;" class="items">
                     <div class="sec-pro-div-2"></div>
@@ -252,7 +257,7 @@
             <div class="post-box-1">
                 <div class="top-section">
                     <div class="profile-img"></div>
-                    <input type="text" placeholder="What's on your mind, Taha?" class="post-input">
+                    <input type="text" placeholder="What's on your mind?" class="post-input">
                 </div>
                 <hr>
                 <div class="bottom-section">
@@ -361,7 +366,7 @@
                     <div class="profile-img"></div>
                     <div class="user-info">
                         <h4>Taha Bin Shafiq</h4>
-                        <span>2 hrs ago</span>
+                        <span>1 day ago</span>
                     </div>
                 </div>
 
@@ -406,7 +411,7 @@
                     <div class="profile-img"></div>
                     <div class="user-info">
                         <h4>Taha Bin Shafiq</h4>
-                        <span>2 hrs ago</span>
+                        <span>4 days ago</span>
                     </div>
                 </div>
 
@@ -535,6 +540,9 @@
 
     </div>
 
+
 </body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="index.js"></script>
 
 </html>
