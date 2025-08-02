@@ -26,12 +26,12 @@ function resgisterUser(event) {
     let fullName = document.getElementById("fullName");
     let email = document.getElementById("email");
     let password = document.getElementById("password");
+    let para = document.getElementById("para")
 
     let usersFormStorage = JSON.parse(localStorage.getItem("users")) || []
 
     let savedUser = usersFormStorage.find((element) => element.email === email.value)
     if (savedUser?.email) {
-        let para = document.getElementById("para")
         para.style.display = "block"
         para.innerHTML = "This user is already registered"
         fullName.value = "";
