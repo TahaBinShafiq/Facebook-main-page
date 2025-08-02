@@ -78,7 +78,7 @@ showFriends();
 
 function addFriend(friendId, userId) {
     console.log(friendId)
-    if (!loggedInUser.friends.includes(friendId)) {
+    if (!(loggedInUser.friends || []).includes(friendId)) {
         loggedInUser.friends.push(friendId);
     }
     console.log(loggedInUser)
