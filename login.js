@@ -3,12 +3,13 @@ class Person {
     email
     password
     id
-    id
+    friends
     constructor(fullName, email, password , id) {
         this.fullName = fullName,
             this.email = email,
             this.password = password
             this.id = id
+            this.friends = []
     }
 }
 
