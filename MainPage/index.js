@@ -59,7 +59,7 @@ function showFriends() {
     const friend = users.filter((user) => user.id !== loggedInUser.id)
     console.log(friend)
     friend.map((element) => {
-        const isMyFriend = loggedInUser.friends.includes(element.id)
+        const isMyFriend = (loggedInUser.friends || []).includes(element.id)
         console.log(isMyFriend);
         document.getElementById("friends-container").innerHTML += `
         <div class="friend-card">
