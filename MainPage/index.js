@@ -79,7 +79,7 @@ showFriends();
 function addFriend(friendId, userId) {
     console.log(friendId)
     if (!(loggedInUser.friends || []).includes(friendId)) {
-        loggedInUser.friends.push(friendId);
+        (loggedInUser.friends || []).push(friendId);
     }
     console.log(loggedInUser)
     localStorage.setItem("loginUser", JSON.stringify(loggedInUser))
