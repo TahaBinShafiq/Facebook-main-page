@@ -4,12 +4,12 @@ class Person {
     password
     id
     friends
-    constructor(fullName, email, password , id) {
+    constructor(fullName, email, password, id) {
         this.fullName = fullName,
             this.email = email,
             this.password = password
-            this.id = id
-            this.friends = []
+        this.id = id
+        this.friends = []
     }
 }
 
@@ -39,7 +39,7 @@ function resgisterUser(event) {
         password.value = "";
     } else {
         let newId = usersFormStorage.length + 1;
-        let newUser = new Person(fullName.value, email.value, password.value , newId);
+        let newUser = new Person(fullName.value, email.value, password.value, newId);
         usersFormStorage.push(newUser);
         console.log(usersFormStorage);
         localStorage.setItem("users", JSON.stringify(usersFormStorage))
@@ -73,6 +73,9 @@ function loginUser(event) {
     let savedUser = usersFormStorage.find((element) => element.email === email.value)
 
     if (savedUser?.email === email.value && savedUser?.password === password.value) {
+        if (!Array.isArray(savedUser.friends)) {
+            savedUser.friends = [];
+        }
         email.value = ""
         password.value = ""
         localStorage.setItem("loginUser", JSON.stringify(savedUser));

@@ -78,7 +78,12 @@ showFriends();
 
 function addFriend(friendId, userId) {
     console.log(friendId)
-    if (!(loggedInUser.friends || []).includes(friendId)) {
+
+    if (!Array.isArray(loggedInUser.friends)) {
+        loggedInUser.friends = [];
+    }
+
+    if (!loggedInUser.friends.includes(friendId)) {
         loggedInUser.friends.push(friendId);
     }
     console.log(loggedInUser)
@@ -103,3 +108,6 @@ function unFriend(removeFriendId, userId) {
     localStorage.setItem("users", JSON.stringify(users));
 
 }
+
+
+console.log(loggedInUser)
