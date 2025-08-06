@@ -20,7 +20,13 @@
         <div class="right-box">
             <form action="" class="login-box">
                 <input type="email" placeholder="Email address or phone number" required id="login-email" />
-                <input type="password" placeholder="Password" required id="login-password" />
+                <div class="password-wrapper">
+                    <input class="inp" type="password" id="loginPassword" placeholder="Password" required>
+                    <span class="toggle-eye" onclick="passwordTypeChnge()">
+                        <img src="https://cdn-icons-png.flaticon.com/512/709/709612.png" alt="Show" class="eye-img"
+                            id="eye-img">
+                    </span>
+                </div>
                 <button class="login-btn" type="submit" onclick="loginUser(event)">Log in</button>
                 <p id="incorrect-pass"></p>
                 <a href="#" class="forgot-link">Forgotten password?</a>

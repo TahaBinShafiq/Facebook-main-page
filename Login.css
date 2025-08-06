@@ -43,6 +43,10 @@ p {
     align-items: center;
 }
 
+.inp{
+    padding-right: 37px !important;
+}
+
 .login-box {
     background: white;
     padding: 20px;
@@ -52,6 +56,33 @@ p {
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    /* padding-right for eye */
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.toggle-eye {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.eye-img {
+    width: 22px;
+    height: 22px;
 }
 
 .login-box input {
@@ -108,7 +139,7 @@ hr {
     text-align: center;
 }
 
-#incorrect-pass{
+#incorrect-pass {
     display: none;
     margin: 0px;
     color: red;

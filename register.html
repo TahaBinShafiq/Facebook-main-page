@@ -16,7 +16,13 @@
             <form id="registerForm">
                 <input type="text" placeholder="Full Name" required id="fullName" />
                 <input type="email" placeholder="Email address" required id="email" />
-                <input type="password" placeholder="Password" required id="password" />
+                <div class="password-wrapper">
+                    <input class="inp" type="password" id="NewPasswordInput" placeholder="Password" required>
+                    <span class="toggle-eye" id="toggle-eye" onclick="passwordTypeChnge()">
+                        <img src="https://cdn-icons-png.flaticon.com/512/709/709612.png" alt="Show" class="eye-img"
+                            id="new-eye-img">
+                    </span>
+                </div>
                 <p style="display: none; margin: 0px; color: red;" id="para"></p>
                 <button type="submit" id="register" onclick="resgisterUser(event)">Register</button>
             </form>

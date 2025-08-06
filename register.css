@@ -62,6 +62,32 @@ button:hover {
     background-color: #36a420;
 }
 
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    /* padding-right for eye */
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.toggle-eye {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.eye-img {
+    width: 22px;
+    height: 22px;
+}
+
 /* ✅ Responsive for small screens */
 @media screen and (max-width: 600px) {
     .logo {
