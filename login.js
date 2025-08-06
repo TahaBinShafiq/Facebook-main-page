@@ -6,8 +6,8 @@ class Person {
     friends
     constructor(fullName, email, password, id) {
         this.fullName = fullName,
-            this.email = email,
-            this.password = password
+        this.email = email,
+        this.password = password
         this.id = id
         this.friends = []
     }
@@ -31,6 +31,7 @@ function resgisterUser(event) {
     let usersFormStorage = JSON.parse(localStorage.getItem("users")) || []
 
     let savedUser = usersFormStorage.find((element) => element.email === email.value)
+    
     if (savedUser?.email) {
         para.style.display = "block"
         para.innerHTML = "This user is already registered"

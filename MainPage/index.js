@@ -1,5 +1,4 @@
 checkUserLogin()
-
 const dropdown = document.getElementById("dropdown");
 const profileIcon = document.getElementById("profile-icon");
 
@@ -88,6 +87,7 @@ function addFriend(friendId, userId) {
     }
     console.log(loggedInUser)
     localStorage.setItem("loginUser", JSON.stringify(loggedInUser))
+    
     users[userId - 1] = loggedInUser
     localStorage.setItem("users", JSON.stringify(users))
     console.log(users)
