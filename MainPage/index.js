@@ -54,7 +54,7 @@ const loggedInUser = JSON.parse(localStorage.getItem("loginUser")) || [];
 const users = JSON.parse(localStorage.getItem("users")) || [];
 
 function showFriends() {
-
+    document.getElementById("friends-container").innerHTML = "";
     const friend = users.filter((user) => user.id !== loggedInUser.id)
     console.log(friend)
     friend.map((element) => {
@@ -87,10 +87,10 @@ function addFriend(friendId, userId) {
     }
     console.log(loggedInUser)
     localStorage.setItem("loginUser", JSON.stringify(loggedInUser))
-    
     users[userId - 1] = loggedInUser
     localStorage.setItem("users", JSON.stringify(users))
     console.log(users)
+    showFriends();
 }
 
 
@@ -106,8 +106,6 @@ function unFriend(removeFriendId, userId) {
 
     users[userId - 1] = loggedInUser;
     localStorage.setItem("users", JSON.stringify(users));
-
+    showFriends();
 }
 
-
-console.log(loggedInUser)
