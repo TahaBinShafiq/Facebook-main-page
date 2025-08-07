@@ -1,3 +1,7 @@
+checkUserLogin()
+
+
+
 class Post {
     constructor(content, owner) {
         this.content = content
@@ -13,8 +17,6 @@ class Post {
 }
 
 
-
-checkUserLogin()
 const dropdown = document.getElementById("dropdown");
 const profileIcon = document.getElementById("profile-icon");
 
@@ -63,67 +65,8 @@ function logoutUser() {
 }
 
 
-
-
-
 const loggedInUser = JSON.parse(localStorage.getItem("loginUser")) || [];
 const users = JSON.parse(localStorage.getItem("users")) || [];
-
-function showFriends() {
-    document.getElementById("friends-container").innerHTML = "";
-    const friend = users.filter((user) => user.id !== loggedInUser.id)
-    console.log(friend)
-    friend.map((element) => {
-        const isMyFriend = (loggedInUser.friends || []).includes(element.id)
-        console.log(isMyFriend);
-        document.getElementById("friends-container").innerHTML += `
-        <div class="friend-card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHgjCOoJ_d6n-PjKd4FwKzXgXKQ-rK9BYYkg&s" class="friend-img" />
-            <h3>${element.fullName}</h3>
-            ${isMyFriend ? `<button id="friend-btn">Friend</button>
-                <button class="remove-btn" onClick="unFriend(${element.id} , ${loggedInUser.id})">Unfriend</button>` : `
-                    <button class="add-btn" onClick="addFriend(${element.id}, ${loggedInUser.id})">Add friend</button>
-                    <button class="remove-btn">Remove</button>`
-            }
-        </div>`;
-    })
-}
-showFriends();
-
-
-function addFriend(friendId, userId) {
-    console.log(friendId)
-
-    if (!Array.isArray(loggedInUser.friends)) {
-        loggedInUser.friends = [];
-    }
-
-    if (!loggedInUser.friends.includes(friendId)) {
-        loggedInUser.friends.push(friendId);
-    }
-    console.log(loggedInUser)
-    localStorage.setItem("loginUser", JSON.stringify(loggedInUser))
-    users[userId - 1] = loggedInUser
-    localStorage.setItem("users", JSON.stringify(users))
-    console.log(users)
-    showFriends();
-}
-
-
-
-function unFriend(removeFriendId, userId) {
-
-    const index = loggedInUser.friends.indexOf(removeFriendId)
-    if (index !== -1) {
-        loggedInUser.friends.splice(index, 1)
-    }
-
-    localStorage.setItem("loginUser", JSON.stringify(loggedInUser));
-
-    users[userId - 1] = loggedInUser;
-    localStorage.setItem("users", JSON.stringify(users));
-    showFriends();
-}
 
 
 function createdPost() {
@@ -142,16 +85,17 @@ function createdPost() {
     let freshOwner = JSON.parse(localStorage.getItem("loginUser"));
     freshOwner.myPosts.push(post)
     console.log(freshOwner)
-    localStorage.setItem("loginUser" , JSON.stringify(freshOwner));
+    localStorage.setItem("loginUser", JSON.stringify(freshOwner));
 
-   let users = JSON.parse(localStorage.getItem("users")) || [];
+    let users = JSON.parse(localStorage.getItem("users")) || [];
     let userIndex = users.findIndex(u => u.email === freshOwner.email);
-   
+    if (userIndex !== -1) {
+        users[userIndex] = freshOwner;
+        localStorage.setItem("users", JSON.stringify(users));
+    }
     showPost();
     inputPost.value = ""
 }
-
-
 
 function showPost() {
     let user = JSON.parse(localStorage.getItem("loginUser"));
@@ -159,6 +103,7 @@ function showPost() {
     let postFeedContainer = document.getElementById("posts-feed-container")
     postFeedContainer.style.marginBottom = "10px"
     postFeedContainer.innerHTML = "";
+
     user.myPosts.reverse().map((post) => {
         let postDate = new Date(post.createdAt).toISOString();
         postFeedContainer.innerHTML += ` <div class="post-box">
@@ -207,4 +152,7 @@ function showPost() {
 
     })
 }
-showPost()
+
+
+
+showPost();
