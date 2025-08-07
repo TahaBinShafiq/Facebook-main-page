@@ -1,5 +1,5 @@
 class Post {
-    constructor(content , owner) {
+    constructor(content, owner) {
         this.content = content
         this.owner = owner
         this.createdAt = new Date().toISOString();
@@ -131,24 +131,24 @@ function createdPost() {
     let inputPost = document.getElementById("post-input")
     let owner = JSON.parse(localStorage.getItem("loginUser"))
     delete owner.password
-    let post = new Post(inputPost.value , owner)
+    let post = new Post(inputPost.value, owner)
     let freshOwner = JSON.parse(localStorage.getItem("loginUser"))
     freshOwner.myPosts.push(post);
-    localStorage.setItem('loginUser' , JSON.stringify(freshOwner));
-    localStorage.setItem("users" , JSON.stringify(freshOwner));
+    localStorage.setItem('loginUser', JSON.stringify(freshOwner));
+    
     console.log(freshOwner)
     inputPost.value = ""
+    showPost()
 }
 
 
-function showPost(){
+function showPost() {
     let user = JSON.parse(localStorage.getItem("loginUser"))
     let postFeedContainer = document.getElementById("posts-feed-container")
 
-    user.myPosts.reverse().map((post) =>{
-
-        postFeedContainer.innerHTML += `<div class="post-box" id="posts-feed-container">
-                <div class="post-header">
+    user.myPosts.reverse().map((post) => {
+        postFeedContainer.innerHTML = "";
+        postFeedContainer.innerHTML += `<div class="post-header">
                     <div class="profile-img"></div>
                     <div class="user-info">
                         <h4>Taha Bin Shafiq</h4>
@@ -187,8 +187,8 @@ function showPost(){
                                     d="M512,230.431L283.498,44.621v94.807C60.776,141.244-21.842,307.324,4.826,467.379   c48.696-99.493,149.915-138.677,278.672-143.14v92.003L512,230.431z" />
                             </g>
                         </svg> Share</button>
-                </div>
-            </div>`
+                </div>`
 
     })
 }
+showPost();
