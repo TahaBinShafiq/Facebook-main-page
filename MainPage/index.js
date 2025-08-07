@@ -138,19 +138,20 @@ function createdPost() {
     delete owner.password
 
     let post = new Post(inputPost.value, owner)
+
     let freshOwner = JSON.parse(localStorage.getItem("loginUser"));
     freshOwner.myPosts.push(post)
+    console.log(freshOwner)
     localStorage.setItem("loginUser" , JSON.stringify(freshOwner));
 
-    let users = JSON.parse(localStorage.getItem("users")) || []
+   let users = JSON.parse(localStorage.getItem("users")) || [];
     let userIndex = users.findIndex(u => u.email === freshOwner.email);
-    if (userIndex !== -1) {
-        users[userIndex] = freshOwner;
-        localStorage.setItem("users", JSON.stringify(users));
-    }
+   
+    showPost();
     inputPost.value = ""
-    showPost()
 }
+
+
 
 function showPost() {
     let user = JSON.parse(localStorage.getItem("loginUser"));
@@ -160,7 +161,8 @@ function showPost() {
     postFeedContainer.innerHTML = "";
     user.myPosts.reverse().map((post) => {
         let postDate = new Date(post.createdAt).toISOString();
-        postFeedContainer.innerHTML += `<div class="post-header">
+        postFeedContainer.innerHTML += ` <div class="post-box">
+                <div class="post-header">
                     <div class="profile-img"></div>
                     <div class="user-info">
                         <h4>${post.owner.fullName}</h4>
@@ -198,9 +200,11 @@ function showPost() {
                                     d="M512,230.431L283.498,44.621v94.807C60.776,141.244-21.842,307.324,4.826,467.379   c48.696-99.493,149.915-138.677,278.672-143.14v92.003L512,230.431z" />
                             </g>
                         </svg> Share</button>
-                </div>`
+                </div>
+
+            
+            </div> `
 
     })
 }
-
-showPost();
+showPost()
