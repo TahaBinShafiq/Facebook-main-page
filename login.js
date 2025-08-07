@@ -33,12 +33,16 @@ class Person {
     password
     id
     friends
+    createdAt
+    myPosts
     constructor(fullName, email, password, id) {
-        this.fullName = fullName,
-            this.email = email,
-            this.password = password
+        this.fullName = fullName
+        this.email = email
+        this.password = password
         this.id = id
         this.friends = []
+        this.createdAt = new Date().toISOString();
+        this.myPosts = []
     }
 }
 
@@ -65,7 +69,7 @@ function resgisterUser(event) {
         para.innerHTML = "This user is already registered"
         fullName.value = "";
         email.value = "";
-        password.value = "";
+        NewPasswordInp.value = "";
     } else {
         let newId = usersFormStorage.length + 1;
         let newUser = new Person(fullName.value, email.value, NewPasswordInp.value, newId);
@@ -75,7 +79,7 @@ function resgisterUser(event) {
         para.style.display = "none"
         fullName.value = ""
         email.value = ""
-        NewPasswordEyeImg.value = ""
+        NewPasswordInp.value = ""
         Swal.fire({
             title: "Your account has been registered.",
             icon: "success",
@@ -95,7 +99,7 @@ function resgisterUser(event) {
 function loginUser(event) {
     event.preventDefault();
     let email = document.getElementById("login-email");
-    
+
 
     let usersFormStorage = JSON.parse(localStorage.getItem("users")) || []
 

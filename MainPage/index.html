@@ -344,7 +344,8 @@
             <div class="post-box-1">
                 <div class="top-section">
                     <div class="profile-img"></div>
-                    <input type="text" placeholder="What's on your mind?" class="post-input">
+                    <input type="text" id="post-input" placeholder="What's on your mind?" class="post-input">
+                    <button id="published-post" onclick="createdPost()">Post</button>
                 </div>
                 <hr class="line-1">
                 <div class="bottom-section">
@@ -405,8 +406,9 @@
             </div>
 
 
-            <div class="post-box">
-                <div class="post-header">
+            <div class="post-box" id="posts-feed-container">
+
+                <!-- <div class="post-header">
                     <div class="profile-img"></div>
                     <div class="user-info">
                         <h4>Taha Bin Shafiq</h4>
@@ -445,10 +447,10 @@
                                     d="M512,230.431L283.498,44.621v94.807C60.776,141.244-21.842,307.324,4.826,467.379   c48.696-99.493,149.915-138.677,278.672-143.14v92.003L512,230.431z" />
                             </g>
                         </svg> Share</button>
-                </div>
+                </div> -->
             </div>
 
-            <div class="post-box">
+             <!-- <div class="post-box">
                 <div class="post-header">
                     <div class="profile-img"></div>
                     <div class="user-info">
@@ -534,7 +536,7 @@
                             </g>
                         </svg> Share</button>
                 </div>
-            </div>
+            </div> -->
 
 
 
@@ -628,8 +630,8 @@
     </div>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="index.js"></script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="index.js"></script>
 
 </html>
