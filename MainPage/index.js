@@ -129,36 +129,47 @@ function unFriend(removeFriendId, userId) {
 function createdPost() {
     let publishedPostBtn = document.getElementById("published-post")
     let inputPost = document.getElementById("post-input")
+    if (!inputPost.value.trim()) {
+        Swal.fire("Please write something before posting.");
+        return;
+    }
     let owner = JSON.parse(localStorage.getItem("loginUser"))
+
     delete owner.password
+
     let post = new Post(inputPost.value, owner)
-    let freshOwner = JSON.parse(localStorage.getItem("loginUser"))
-    freshOwner.myPosts.push(post);
-    localStorage.setItem('loginUser', JSON.stringify(freshOwner));
-    
-    console.log(freshOwner)
+    let freshOwner = JSON.parse(localStorage.getItem("loginUser"));
+    freshOwner.myPosts.push(post)
+    localStorage.setItem("loginUser" , JSON.stringify(freshOwner));
+
+    let users = JSON.parse(localStorage.getItem("users")) || []
+    let userIndex = users.findIndex(u => u.email === freshOwner.email);
+    if (userIndex !== -1) {
+        users[userIndex] = freshOwner;
+        localStorage.setItem("users", JSON.stringify(users));
+    }
     inputPost.value = ""
     showPost()
 }
 
-
 function showPost() {
-    let user = JSON.parse(localStorage.getItem("loginUser"))
+    let user = JSON.parse(localStorage.getItem("loginUser"));
+    console.log(user)
     let postFeedContainer = document.getElementById("posts-feed-container")
-
+    postFeedContainer.style.marginBottom = "10px"
+    postFeedContainer.innerHTML = "";
     user.myPosts.reverse().map((post) => {
-        postFeedContainer.innerHTML = "";
+        let postDate = new Date(post.createdAt).toISOString();
         postFeedContainer.innerHTML += `<div class="post-header">
                     <div class="profile-img"></div>
                     <div class="user-info">
-                        <h4>Taha Bin Shafiq</h4>
-                        <span>2 hrs ago</span>
+                        <h4>${post.owner.fullName}</h4>
+                        <span>${postDate}</span>
                     </div>
                 </div>
 
                 <div class="post-content">
-                    <img src="https://miro.medium.com/v2/resize:fit:1200/1*LyZcwuLWv2FArOumCxobpA.png"
-                        alt="post image" />
+                    ${post.content}
                 </div>
 
                 <div class="post-actions">
@@ -191,4 +202,5 @@ function showPost() {
 
     })
 }
+
 showPost();

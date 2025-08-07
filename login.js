@@ -61,7 +61,6 @@ function resgisterUser(event) {
     let para = document.getElementById("para")
 
     let usersFormStorage = JSON.parse(localStorage.getItem("users")) || []
-
     let savedUser = usersFormStorage.find((element) => element.email === email.value)
 
     if (savedUser?.email) {
@@ -115,7 +114,7 @@ function loginUser(event) {
         window.location.assign("MainPage/index.html")
     } else {
         email.value = ""
-        password.value = ""
+        passInput.value = ""
         let incorrectPass = document.getElementById("incorrect-pass")
         incorrectPass.style.display = "block";
         incorrectPass.innerHTML = "Invalid credientials"
