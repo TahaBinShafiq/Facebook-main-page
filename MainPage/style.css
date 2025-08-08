@@ -135,7 +135,7 @@ header .search-bar {
 
 
 .profile-div {
-    background-image: url('pro-img.jpg');
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHgjCOoJ_d6n-PjKd4FwKzXgXKQ-rK9BYYkg&s');
     background-size: cover;
     width: 20px;
     height: 20px;
@@ -181,7 +181,7 @@ header .search-bar {
 .sec-pro-div {
     border: 1ps solid black;
     padding: 16px;
-    background-image: url('pro-img.jpg');
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHgjCOoJ_d6n-PjKd4FwKzXgXKQ-rK9BYYkg&s');
     background-size: cover;
     border-radius: 50%;
 }
@@ -281,10 +281,10 @@ main {
 }
 
 .profile-img {
-    width: 40px;
-    height: 40px;
+    width: 40px !important;
+    height: 40px !important;
     border-radius: 50%;
-    background-image: url('pro-img.jpg');
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHgjCOoJ_d6n-PjKd4FwKzXgXKQ-rK9BYYkg&s') ;
     background-size: cover;
 }
 
@@ -363,8 +363,9 @@ span {
 
 .img-2 {
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
-    background-image: url('https://scontent.fkhi2-2.fna.fbcdn.net/v/t39.30808-6/486310170_3960968014121066_1899011110253056930_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=aMR0zpZ87JkQ7kNvwEW-n2j&_nc_oc=Adm3ga6PP3OyX8lB_4pOhxr6dtfJlFjfaSjywJfT0OPdi3R0BzLL5v3222pKQJ6W_1E&_nc_zt=23&_nc_ht=scontent.fkhi2-2.fna&_nc_gid=8p4-rgi2F9v3emoOJIoYjw&oh=00_AfRcomOH0SQIviws6UPs7Oc8_HAuauvIWRI-c1_5PFr9uw&oe=68928C26');
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHgjCOoJ_d6n-PjKd4FwKzXgXKQ-rK9BYYkg&s');
     height: 100%;
     width: 100%;
 }
@@ -378,7 +379,7 @@ span {
 .img-3 {
     background-size: cover;
     background-position: center;
-    background-image: url('https://scontent.fkhi2-2.fna.fbcdn.net/v/t39.30808-6/503210216_752554284046528_3758787315229100829_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=G2WXBLblG20Q7kNvwE76Kme&_nc_oc=AdlRwFyl-oaDlNdfOoyuOQFiXLR32ryXlLCGnFLc_-hY0QlzZXKDiMPBTgfKxV83fBc&_nc_zt=23&_nc_ht=scontent.fkhi2-2.fna&_nc_gid=eRVq5vL3UpFel2xKEku6bA&oh=00_AfQg7mpkoyr9yIXa3IWY3GUs1AJ7n2oGiOd2ia77DEI-fA&oe=6892924A');
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHgjCOoJ_d6n-PjKd4FwKzXgXKQ-rK9BYYkg&s');
     height: 100%;
     width: 100%;
 }
@@ -392,7 +393,7 @@ span {
 .img-4 {
     background-size: cover;
     background-position: center;
-    background-image: url('https://scontent.fkhi2-2.fna.fbcdn.net/v/t39.30808-6/474904476_9386498951400866_2718508434830267871_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=5jb2Ot7IdgkQ7kNvwGoqRDY&_nc_oc=AdlRaoVQW0Kun4mQyOykyTH7QQM2T4Y0ShGKOGDIzbjoHRqsuFnmAnZTBQ4goMAy2Fo&_nc_zt=23&_nc_ht=scontent.fkhi2-2.fna&_nc_gid=JjKsdt5aGlLLiiNmyS3z2w&oh=00_AfRHUZXJN1L6pFD0XNrn0d3OppyLn9drwsUy-dnH5JmhPQ&oe=689290E5');
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHgjCOoJ_d6n-PjKd4FwKzXgXKQ-rK9BYYkg&s');
     height: 100%;
     width: 100%;
     transition: transform 0.2s ease-in-out;
@@ -413,8 +414,9 @@ span {
 .my-image {
     width: 100%;
     height: 75%;
-    background-image: url('pro-img.jpg');
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHgjCOoJ_d6n-PjKd4FwKzXgXKQ-rK9BYYkg&s');
     background-size: cover;
+    background-position: center;
     transition: transform 0.2s ease-in-out;
 }
 
@@ -447,6 +449,7 @@ span {
     font-weight: bold;
     text-align: center;
     font-family: Arial, sans-serif;
+    color: black;
 }
 
 .story-name-2 {
@@ -459,6 +462,7 @@ span {
     z-index: 999;
     color: white;
     font-family: Arial, sans-serif;
+    color: black;
 
 }
 
@@ -526,6 +530,7 @@ span {
     display: flex;
     align-items: center;
     padding: 15px;
+    margin-top: 0px !important;
 }
 
 .avatar {
@@ -551,6 +556,7 @@ span {
 
 .post-content {
     padding: 0 15px 15px 15px;
+    margin-top: 0px !important;
 }
 
 .post-content p {
@@ -568,6 +574,7 @@ span {
     flex-direction: row !important;
     border-top: 1px solid #ddd;
     padding: 10px;
+    margin-top: 0px !important;
 }
 
 
@@ -721,6 +728,153 @@ span {
 }
 
 
+.profile-header {
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    height: fit-content;
+}
+
+/* Cover Photo */
+.cover-photo {
+    position: relative;
+}
+
+.cover-photo img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.edit-cover {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: white;
+    border: none;
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.edit-cover:hover {
+    background: #f0f2f5;
+}
+
+/* Profile Info Section */
+.profile-info {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 15px 15px;
+    position: relative;
+}
+
+.profile-pic {
+    margin-top: -60px;
+    border: 5px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 160px;
+    height: 160px;
+    flex-shrink: 0;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-details {
+    flex: 1;
+    margin-left: 15px;
+}
+
+.profile-details h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.profile-details p {
+    color: #65676b;
+    margin: 4px 0 0;
+    font-size: 15px;
+}
+
+/* Buttons */
+.profile-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.profile-actions button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.add-story {
+    background: #1877f2;
+    color: white;
+}
+
+.add-story:hover {
+    background: #166fe5;
+}
+
+.edit-profile {
+    background: #e4e6eb;
+    color: #050505;
+}
+
+.edit-profile:hover {
+    background: #d8dadf;
+}
+
+/* Navigation */
+.profile-nav {
+    display: flex;
+    gap: 25px;
+    padding: 12px 15px 0;
+    border-top: 1px solid #dddfe2;
+}
+
+.profile-nav a {
+    text-decoration: none;
+    color: #65676b;
+    font-weight: 500;
+    padding-bottom: 12px;
+    border-bottom: 3px solid transparent;
+    transition: 0.2s;
+}
+
+.profile-nav a:hover {
+    color: #1877f2;
+    border-bottom: 3px solid #1877f2;
+}
+
+
+.profile-page{
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0px auto;
+}
+
+.profile-page div{
+    /* width: 50%; */
+    height: fit-content;
+    margin-top: 10px;
+}
 
 @media screen and (max-width:600px) {
 

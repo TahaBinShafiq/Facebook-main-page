@@ -102,7 +102,8 @@ function showPost() {
         let postDate = new Date(post.createdAt).toISOString();
         postFeedContainer.innerHTML += ` <div class="post-box">
                 <div class="post-header">
-                    <div class="profile-img"></div>
+                    <div class="profile-img">
+                    </div>
                     <div class="user-info">
                         <h4>${post.owner.fullName}</h4>
                         <span>${postDate}</span>
@@ -146,7 +147,6 @@ function showPost() {
 
 }
 
-showPost();
 
 
 
