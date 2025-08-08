@@ -33,9 +33,10 @@ header {
     justify-content: space-between;
     padding-left: 15px;
     box-shadow: 2px 2px 5px rgb(207, 207, 207);
-    z-index: 100;
+    z-index: 9999;
     position: sticky;
     top: 0%;
+
 }
 
 header .search-bar {
@@ -259,6 +260,7 @@ main {
     height: fit-content !important;
     /* border: 2px solid black; */
     padding-top: 20px;
+    min-height: 100vh;
 
 }
 
