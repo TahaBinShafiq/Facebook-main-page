@@ -80,8 +80,8 @@ function createdPost() {
 
     let freshOwner = JSON.parse(localStorage.getItem("loginUser"));
     if (!Array.isArray(freshOwner.myPosts)) {
-    freshOwner.myPosts = [];
-}
+        freshOwner.myPosts = [];
+    }
     freshOwner.myPosts.push(post)
 
     console.log(freshOwner)
@@ -94,14 +94,14 @@ function createdPost() {
         localStorage.setItem("users", JSON.stringify(users));
     }
     inputPost.value = ""
-    
+
 
     if (document.getElementById("posts-feed-container")) {
         showPost();
     }
 
     if (document.getElementById("newsfeed-container")) {
-        document.getElementById("newsfeed-container").innerHTML = ""; 
+        document.getElementById("newsfeed-container").innerHTML = "";
         showNewsFeed();
     }
 }
@@ -160,11 +160,11 @@ function showPost() {
 }
 
 
-function showNewsFeed(){
+function showNewsFeed() {
     let users = JSON.parse(localStorage.getItem("users"))
     let allPosts = []
-   users.forEach(user => {
-        if (Array.isArray(user.myPosts)) { 
+    users.forEach(user => {
+        if (Array.isArray(user.myPosts)) {
             user.myPosts.forEach(post => {
                 allPosts.push((post));
             });
@@ -172,7 +172,7 @@ function showNewsFeed(){
     });
 
     allPosts.reverse().map((post) => {
-         let postDate = new Date(post.createdAt).toISOString()
+        let postDate = new Date(post.createdAt).toISOString()
         document.getElementById("newsfeed-container").innerHTML += `<div class="post-box">
                 <div class="post-header">
                     <div class="profile-img">
