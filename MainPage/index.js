@@ -172,6 +172,7 @@ function showNewsFeed(){
     });
 
     allPosts.reverse().map((post) => {
+        console.log(post.owner.createdAt)
         document.getElementById("newsfeed-container").innerHTML += `<div class="post-box">
                 <div class="post-header">
                     <div class="profile-img">
