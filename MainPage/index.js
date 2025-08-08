@@ -172,14 +172,14 @@ function showNewsFeed(){
     });
 
     allPosts.reverse().map((post) => {
-        console.log(post.owner.createdAt)
+         let postDate = new Date(post.createdAt).toISOString()
         document.getElementById("newsfeed-container").innerHTML += `<div class="post-box">
                 <div class="post-header">
                     <div class="profile-img">
                     </div>
                     <div class="user-info">
                         <h4>${post.owner.fullName}</h4>
-                        <span>${post.owner.createdAt}</span>
+                        <span>${postDate}</span>
                     </div>
                 </div>
 
