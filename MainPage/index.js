@@ -90,7 +90,16 @@ function createdPost() {
         localStorage.setItem("users", JSON.stringify(users));
     }
     inputPost.value = ""
-    showPost();
+    
+
+    if (document.getElementById("posts-feed-container")) {
+        showPost();
+    }
+
+    if (document.getElementById("newsfeed-container")) {
+        document.getElementById("newsfeed-container").innerHTML = ""; 
+        showNewsFeed();
+    }
 }
 
 function showPost() {
