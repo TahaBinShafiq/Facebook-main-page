@@ -79,7 +79,11 @@ function createdPost() {
     let post = new Post(inputPost.value, owner)
 
     let freshOwner = JSON.parse(localStorage.getItem("loginUser"));
+    if (!Array.isArray(freshOwner.myPosts)) {
+    freshOwner.myPosts = [];
+}
     freshOwner.myPosts.push(post)
+
     console.log(freshOwner)
     localStorage.setItem("loginUser", JSON.stringify(freshOwner));
 
