@@ -563,19 +563,23 @@ span {
 }
 
 .post-actions {
-    display: flex;
+    display: flex !important;
     justify-content: space-around;
+    flex-direction: row !important;
     border-top: 1px solid #ddd;
     padding: 10px;
 }
 
-.post-actions button {
+
+
+.post-actions button{
     background: none;
     border: none;
     color: #555;
     font-size: 16px;
     cursor: pointer;
     display: flex;
+    /* justify-content: space-around; */
     align-items: center;
     gap: 5px;
     padding: 5px 10px;

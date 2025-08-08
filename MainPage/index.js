@@ -1,7 +1,4 @@
 checkUserLogin()
-
-
-
 class Post {
     constructor(content, owner) {
         this.content = content
@@ -11,9 +8,8 @@ class Post {
         this.comments = []
     }
     increaseLike() {
-        this.likes++
+        this.likes++;
     }
-
 }
 
 
@@ -99,12 +95,10 @@ function createdPost() {
 
 function showPost() {
     let user = JSON.parse(localStorage.getItem("loginUser"));
-    console.log(user)
     let postFeedContainer = document.getElementById("posts-feed-container")
     postFeedContainer.style.marginBottom = "10px"
     postFeedContainer.innerHTML = "";
-
-    user.myPosts.reverse().map((post) => {
+    user.myPosts.reverse().map((post, index) => {
         let postDate = new Date(post.createdAt).toISOString();
         postFeedContainer.innerHTML += ` <div class="post-box">
                 <div class="post-header">
@@ -119,7 +113,7 @@ function showPost() {
                     ${post.content}
                 </div>
 
-                <div class="post-actions">
+               <div class="post-actions">
                     <button><svg xmlns="http://www.w3.org/2000/svg" height="20px" width="20px" fill="none"
                             viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -146,13 +140,27 @@ function showPost() {
                             </g>
                         </svg> Share</button>
                 </div>
-
-            
+                </div>
             </div> `
-
     })
+
 }
 
-
-
 showPost();
+
+
+
+function showNewsFeed(){
+    let users = JSON.parse(localStorage.getItem("users"))
+    let allPosts = []
+   users.forEach(user => {
+        if (Array.isArray(user.myPosts)) { 
+            user.myPosts.forEach(post => {
+                allPosts.push((post));
+            });
+        }
+    });
+    console.log(allPosts)
+}
+
+showNewsFeed()
