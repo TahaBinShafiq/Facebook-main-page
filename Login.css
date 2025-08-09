@@ -43,7 +43,7 @@ p {
     align-items: center;
 }
 
-.inp{
+.inp {
     padding-right: 37px !important;
 }
 
@@ -190,7 +190,7 @@ hr {
 
 
         .login-box {
-            width: 90%;
+            width: 95%;
             max-width: 100%;
             box-shadow: none;
             border-radius: 0;
@@ -201,7 +201,7 @@ hr {
         .login-box input,
         .login-btn,
         .create-btn {
-            width: 95%;
+            width: 93%;
             border-radius: 30px;
         }
 
@@ -221,6 +221,13 @@ hr {
         .login-box input {
             height: 32px;
             border-radius: 10px;
+        }
+
+        .inp {
+            height: 57px !important;
+            border-radius: 10px;
+            padding: 20px !important;
+            width: 100% !important;
         }
 
         .forgot-link {
