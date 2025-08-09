@@ -878,6 +878,66 @@ span {
     margin-top: 10px;
 }
 
+.first-container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.intro-card {
+  width: 350px;
+  height: 330px !important;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.intro-card h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.bio {
+  text-align: center;
+  font-size: 16px;
+  margin: 5px 0 15px;
+}
+
+.edit-btn {
+  width: 100%;
+  background: #e4e6eb;
+  border: none;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  
+}
+
+.edit-btn:hover {
+  background: #d8dadf;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.icon {
+  font-size: 16px;
+  margin-right: 8px;
+}
+
 @media screen and (max-width:600px) {
 
 
