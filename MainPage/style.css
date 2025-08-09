@@ -286,7 +286,7 @@ main {
     width: 40px !important;
     height: 40px !important;
     border-radius: 50%;
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHgjCOoJ_d6n-PjKd4FwKzXgXKQ-rK9BYYkg&s') ;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHgjCOoJ_d6n-PjKd4FwKzXgXKQ-rK9BYYkg&s');
     background-size: cover;
 }
 
@@ -581,7 +581,7 @@ span {
 
 
 
-.post-actions button{
+.post-actions button {
     background: none;
     border: none;
     color: #555;
@@ -734,7 +734,7 @@ span {
     max-width: 900px;
     margin: auto;
     background: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
     height: fit-content;
 }
@@ -761,7 +761,7 @@ span {
     border-radius: 6px;
     font-weight: 500;
     font-size: 14px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .edit-cover:hover {
@@ -865,20 +865,20 @@ span {
 }
 
 
-.profile-page{
+.profile-page {
     display: flex;
     justify-content: space-between;
     width: 900px;
     margin: 0px auto;
 }
 
-.profile-page div{
+.profile-page div {
     /* width: 50%; */
     height: fit-content;
     margin-top: 10px;
 }
 
-.first-container{
+.first-container {
     width: 50%;
     display: flex;
     justify-content: start;
@@ -887,55 +887,55 @@ span {
 
 
 .intro-card {
-  width: 320px;
-  height: 330px !important;
-  background: white;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  padding: 15px;
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+    width: 320px;
+    height: 330px !important;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .intro-card h2 {
-  font-size: 18px;
-  margin-bottom: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
 .bio {
-  text-align: center;
-  font-size: 16px;
-  margin: 5px 0 15px;
+    text-align: center;
+    font-size: 16px;
+    margin: 5px 0 15px;
 }
 
 .edit-btn {
-  width: 100%;
-  background: #e4e6eb;
-  border: none;
-  padding: 10px;
-  margin: 5px 0;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  
+    width: 100%;
+    background: #e4e6eb;
+    border: none;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+
 }
 
 .edit-btn:hover {
-  background: #d8dadf;
+    background: #d8dadf;
 }
 
 .info-item {
-  display: flex;
-  align-items: center;
-  margin: 8px 0;
-  font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    font-size: 14px;
 }
 
 .icon {
-  font-size: 16px;
-  margin-right: 8px;
+    font-size: 16px;
+    margin-right: 8px;
 }
 
 @media screen and (max-width:600px) {
