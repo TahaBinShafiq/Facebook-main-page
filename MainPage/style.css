@@ -1198,14 +1198,25 @@ span {
         display: flex;
         flex-direction: column;
         justify-content: start!important;
+        align-items: center;
         padding: 0px;
+    }
+
+    .profile-details{
+        flex: 0;
     }
 
     .profile-nav{
         display: none;
     }
 
+    .first-container{
+        width: 100%;
+        justify-content: center;
+    }
+
     .profile-page{
         flex-direction: column;
+        width: 100%;
     }
 }
