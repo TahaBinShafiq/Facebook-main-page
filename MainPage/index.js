@@ -14,11 +14,16 @@ class Post {
 
 
 const dropdown = document.getElementById("dropdown");
+const mediaDropDown = document.getElementById("dropdown-2");
 const profileIcon = document.getElementById("profile-icon");
 
 function toggleDropdown() {
     dropdown.classList.toggle("show");
+    mediaDropDown.classList.toggle("show")
 }
+
+
+
 
 window.addEventListener("click", function (e) {
     if (!profileIcon.contains(e.target) && !dropdown.contains(e.target)) {

@@ -621,7 +621,7 @@ span {
     border-radius: 8px !important;
     flex-direction: column;
     min-width: 180px;
-    z-index: 999;
+    z-index: 999999;
     padding: 20px !important;
 }
 
@@ -884,6 +884,23 @@ span {
     justify-content: start;
 }
 
+#published-post{
+    padding: 10px;
+    background-color: #6398ee;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+#published-post:hover{
+     background-color:  #2472f0;
+     transform:scale(1.1);
+     transition: all 0.2s ease-in;
+    
+}
+
 
 
 .intro-card {
@@ -1105,12 +1122,7 @@ span {
     }
 
     .account-2 {
-        height: 100%;
-        width: 40px;
-        display: flex !important;
-        margin-bottom: 10px !important;
-        padding-bottom: 10px;
-        padding-left: 10px;
+        display: none;
     }
 
     .icon-2 {
@@ -1148,5 +1160,52 @@ span {
 
     .post-input {
         width: 220px;
+    }
+
+
+    .dropdown-menu{
+        width: 100%;
+        flex-direction: column;
+        z-index: 999999;
+        top: 50px;
+        position:absolute;
+        background-color: rgb(246, 246, 246);
+        height: 300px;
+        width: 40%;
+        right: 0px;
+        border-radius: 10px;
+    }
+
+    .dropdown-menu a{
+        width: fit-content;
+    }
+
+    .profile-header{
+        width: 100% !important;
+    }
+
+    .cover-photo{
+        height: 200px;
+    }
+
+    .profile-pic{
+        height: 100px;
+        width: 100px;
+    }
+
+    .profile-info{
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: start!important;
+        padding: 0px;
+    }
+
+    .profile-nav{
+        display: none;
+    }
+
+    .profile-page{
+        flex-direction: column;
     }
 }
