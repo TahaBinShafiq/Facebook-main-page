@@ -76,7 +76,11 @@ function createdPost() {
 
     delete owner.password
 
-    let post = new Post(inputPost.value, owner)
+    let post = {
+        content: inputPost.value,
+        owner : owner,
+        time: Date.now()
+    };
 
     let freshOwner = JSON.parse(localStorage.getItem("loginUser"));
     if (!Array.isArray(freshOwner.myPosts)) {
@@ -110,15 +114,15 @@ function showPost() {
     let user = JSON.parse(localStorage.getItem("loginUser"));
     let postFeedContainer = document.getElementById("posts-feed-container")
     postFeedContainer.innerHTML = "";
-    user.myPosts.reverse().map((post, index) => {
-        let postDate = new Date(post.createdAt).toISOString();
+    user.myPosts.reverse().map((post) => {
+        console.log(user.myPosts)
         postFeedContainer.innerHTML += ` <div class="post-box">
                 <div class="post-header">
                     <div class="profile-img">
                     </div>
                     <div class="user-info">
                         <h4>${post.owner.fullName}</h4>
-                        <span>${postDate}</span>
+                        <span>${new Date(post.time).toLocaleString()}</span>
                     </div>
                 </div>
 
@@ -169,17 +173,16 @@ function showNewsFeed() {
                 allPosts.push((post));
             });
         }
-    });
-
-    allPosts.reverse().map((post) => {
-        let postDate = new Date(post.createdAt).toISOString()
+    });  
+    allPosts.sort(() => Math.random() - 0.5 );
+    allPosts.map((post) => {
         document.getElementById("newsfeed-container").innerHTML += `<div class="post-box">
                 <div class="post-header">
                     <div class="profile-img">
                     </div>
                     <div class="user-info">
                         <h4>${post.owner.fullName}</h4>
-                        <span>${postDate}</span>
+                        <span>${new Date(post.time).toLocaleString()}</span>
                     </div>
                 </div>
 
