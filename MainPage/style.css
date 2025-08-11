@@ -884,7 +884,7 @@ span {
     justify-content: start;
 }
 
-#published-post{
+#published-post {
     padding: 10px;
     background-color: #6398ee;
     border: none;
@@ -894,11 +894,11 @@ span {
     transition: all 0.1s ease-in-out;
 }
 
-#published-post:hover{
-     background-color:  #2472f0;
-     transform:scale(1.1);
-     transition: all 0.2s ease-in;
-    
+#published-post:hover {
+    background-color: #2472f0;
+    transform: scale(1.1);
+    transition: all 0.2s ease-in;
+
 }
 
 
@@ -1163,12 +1163,12 @@ span {
     }
 
 
-    .dropdown-menu{
+    .dropdown-menu {
         width: 100%;
         flex-direction: column;
         z-index: 999999;
         top: 50px;
-        position:absolute;
+        position: absolute;
         background-color: rgb(246, 246, 246);
         height: 300px;
         width: 40%;
@@ -1176,46 +1176,82 @@ span {
         border-radius: 10px;
     }
 
-    .dropdown-menu a{
+    .dropdown-menu a {
         width: fit-content;
     }
 
-    .profile-header{
+    .profile-header {
         width: 100% !important;
     }
 
-    .cover-photo{
+    .cover-photo {
         height: 200px;
     }
 
-    .profile-pic{
+    .profile-pic {
         height: 100px;
         width: 100px;
     }
 
-    .profile-info{
+    .intro-card{
+        margin: 0px !important;
+        gap: 0px;
+        height: min-content !important;
+        padding: 10px !important;
+        width: 90%;
+    }
+
+    .post-box-1{
+        margin: 0px !important;
+    }
+
+    .profile-info {
         width: 100% !important;
         display: flex;
         flex-direction: column;
-        justify-content: start!important;
+        justify-content: start !important;
         align-items: center;
         padding: 0px;
+        gap: 10px;
+        background-color: white;
+        padding-bottom: 10px;
     }
 
-    .profile-details{
+    .profile-details {
         flex: 0;
+        margin-right: 100px;
+        margin-left: 0px;
     }
 
-    .profile-nav{
+    .profile-pic{
+        margin-right: 200px;
+    }
+
+    .profile-actions {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .add-story {
+        width: 150px;
+        height: 40px;
+    }
+
+    .edit-profile {
+        width: 150px;
+        height: 40px;
+    }
+
+    .profile-nav {
         display: none;
     }
 
-    .first-container{
+    .first-container {
         width: 100%;
         justify-content: center;
     }
 
-    .profile-page{
+    .profile-page {
         flex-direction: column;
         width: 100%;
     }
